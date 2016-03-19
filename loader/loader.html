@@ -1,0 +1,106 @@
+<style>
+body {
+  background-color: #F5F5F5;
+  color: #555;
+  font-size: 1.1em;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+hr {
+  margin: 50px 0;
+}
+
+.logoContainer {
+  margin: 50px auto;
+  min-width: 320px;
+  max-width: 500px;
+  z-index: 1000;
+}
+
+.element {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  top: 0;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+.source {
+ position:relative;
+ top: 130px;
+ left:170px;
+}
+.jet {
+ position:relative;
+ top: 135px;
+ left:180px;
+  -webkit-animation: flash 4s infinite;
+  animation: flash 4s infinite;
+}
+.texte {
+ position:relative;
+ top: 140px;
+ left:100px;
+   -webkit-animation: fadeInLeft 2s infinite;
+  animation: fadeInLeft 4s infinite;
+}
+
+@-webkit-keyframes bounce {
+  from {
+    top: 150px;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    top: 210;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes bounce {
+  from {
+    top: 150px;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    top: 210px;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  to {
+    top: 150px;
+  }
+}
+
+@keyframes fadeInLeft {
+   0% {
+      opacity: 0;
+      transform: translateX(-20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}   
+
+@-webkit-keyframes flash {
+    0%, 50%, 100% {opacity: 1;}
+    25%, 75% {opacity: 0;}
+}
+@keyframes flash {
+    0%, 50%, 100% {opacity: 1;}
+    25%, 75% {opacity: 0;}
+}
+</style>
+<div class="logoContainer">
+  <p></p>
+  <div class="element"><img src="globe.png"></div>
+  <div class="jet"><img src="jet.png"></div>
+  <div class="source"><img src="source1.png"></div>
+  <div class="texte"><img src="texte.png"></div>
+</div>
